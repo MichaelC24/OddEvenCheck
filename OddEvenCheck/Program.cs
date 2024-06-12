@@ -4,19 +4,29 @@
     {
         static void Main(string[] args)
         {
-            var input = 4;
+            int input = 1;
 
-            //Console.WriteLine("Please input a number");
-            //string userInput = Console.ReadLine();
+            while (true)
 
-            //input = int.Parse(userInput);
-
-            if (input % 2 == 0)
             {
-                Console.WriteLine($"The number {input} is even");
-            }
-            else Console.WriteLine($"The number {input} is odd");
 
+                Console.Write("Enter an integer (Zero to close): ");
+                string userInput = Console.ReadLine();
+
+                input = Convert.ToInt32(userInput);
+
+                if (input == 0)
+                {
+                    break;
+                }
+            
+                if (input % 2 == 0)
+                {
+                    Console.WriteLine($"The number {input} is even");
+                }
+                else Console.WriteLine($"The number {input} is odd");
+            }
+                Console.Write("Done...");
         }
     }
 }
